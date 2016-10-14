@@ -1,7 +1,7 @@
 <?php
 function setdb(){
-	$username="Career";
-	$password="Career7012";
+	$username="";
+	$password="";
 	$connDb="internship";
 	$link = mysql_connect("120.102.163.54", $username, $password) or die(mysql_error());
 	mysql_select_db($connDb) or die("Could not select database");
@@ -20,14 +20,14 @@ class f{
 	}
 	function check(){
 		if ($_SERVER['PHP_AUTH_USER']!="gard" || md5($_SERVER['PHP_AUTH_PW'])!=$this->check_pw()){
-			header('WWW-Authenticate: Basic realm="My Realm"'); //»{ÃÒ¥¢±Ñ¡AÄ~Äò»{ÃÒ
+			header('WWW-Authenticate: Basic realm="My Realm"'); //èªè­‰å¤±æ•—ï¼Œç¹¼çºŒèªè­‰
 			header('HTTP/1.0 401 Unauthorized');
 			exit;
 		}
 	}
 }
 $f=new f;
-function deleteDirectory($dir) {//±j¨î§R°£¥Ø¿ı
+function deleteDirectory($dir) {//å¼·åˆ¶åˆªé™¤ç›®éŒ„
     if (!file_exists($dir)) return true;  
     if (!is_dir($dir) || is_link($dir)) return unlink($dir);  
         foreach (scandir($dir) as $item) {  
