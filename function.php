@@ -3,7 +3,7 @@ function setdb(){
 	$username="";
 	$password="";
 	$connDb="internship";
-	$link = mysql_connect("120.102.163.54", $username, $password) or die(mysql_error());
+	$link = mysql_connect("", $username, $password) or die(mysql_error());
 	mysql_select_db($connDb) or die("Could not select database");
 	mysql_query("SET NAMES utf8");
 	mysql_query("SET CHARACTER_SET_CLIENT=utf8"); 
